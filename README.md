@@ -47,3 +47,37 @@ This project uses an ESP8266 microcontroller to monitor temperature readings fro
 - **Ground (GND)**: Connect to GND
 
 - **4.7kΩ Resistor**: Connect between the data pin and VCC
+
+## Configuration
+
+Update the following constants in the code before uploading to the board:
+```
+const char *ssid = "Your_WiFi_SSID";
+const char *password = "Your_WiFi_Password";
+const char *serverUrl = "http://your-server-address/endpoint";
+```
+
+## Testing and Debugging
+
+- Open the Serial Monitor (baud rate: 115200) to view debugging information.
+
+- Ensure the ESP8266 connects to Wi-Fi and the correct number of devices is detected.
+
+- Verify the server receives temperature data.
+
+## Example Output
+```
+Locating devices...Found 3 devices.
+Connected to Wi-Fi
+NodeMCU MAC Address: A4:CF:12:34:56:78
+NodeMCU IP Address: 192.168.1.10
+Temperature for device: 0
+Temp C: 23.50
+{"temperature": 23.50, "name": "sensor_0"}
+HTTP Response: 200
+```
+
+## Notes
+
+- Ensure the server endpoint is ready to receive and process the JSON payload.
+- Adjust the interval by modifying the interval constant (default 30,000 ms).
