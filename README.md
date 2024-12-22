@@ -14,6 +14,7 @@ This project uses an ESP8266 microcontroller to monitor temperature readings fro
 
 - Provides debugging information via serial communication.
 
+
 ## Components
 
 - **ESP8266 NodeMCU** – Microcontroller
@@ -22,26 +23,27 @@ This project uses an ESP8266 microcontroller to monitor temperature readings fro
 
 - **4.7kΩ Resistor** – Pull-up resistor for the DS18B20 data line
 
-Required Libraries
 
-Install the following libraries through the Arduino Library Manager:
+## Required Libraries
 
-ArduinoHttpClient
+ Install the following libraries through the Arduino Library Manager:
 
-OneWire
+- `ArduinoHttpClient`
 
-DallasTemperature
+- `OneWire`
 
-ESP8266WiFi
+- `DallasTemperature`
 
-ESP8266HTTPClient
+- `ESP8266WiFi`
 
-Circuit Diagram
+- `ESP8266HTTPClient`
 
-ONE_WIRE_BUS (GPIO 4): Connect DS18B20 data pin to GPIO 4 (D2 on NodeMCU)
+## Circuit Diagram
 
-Power (VCC): Connect to 3.3V (or 5V based on sensor)
+- ONE_WIRE_BUS (GPIO 4): Connect DS18B20 data pin to GPIO 4 (D2 on NodeMCU)
 
-Ground (GND): Connect to GND
+- Power (VCC): Connect to 3.3V (or 5V based on sensor)
 
-4.7kΩ Resistor: Connect between the data pin and VCC
+- Ground (GND): Connect to GND
+
+- 4.7kΩ Resistor: Connect between the data pin and VCC
